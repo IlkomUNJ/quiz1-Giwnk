@@ -94,9 +94,9 @@ int main() {
                             cout << "\n[INFO] Upgrade Account to Seller selected." << endl;
 
                             if (!isBankLinked) {
-                                cout << "⚠️ Upgrade ditolak: Anda belum punya Bank Account linked!\n";
+                                cout << "Upgrade denied: You do not have a linked Bank Account!\n";
                             } else if (isSeller) {
-                                cout << "⚠️ Anda sudah menjadi Seller!\n";
+                                cout << " You are already a Seller!\n";
                             } else {
                                 string storeName, storeAddr, storePhone, storeEmail;
                                 cin.ignore();
@@ -222,8 +222,6 @@ int main() {
 
         cout << endl;
     }
-
-    // Cleanup memory (jaga-jaga)
     delete buyer1;
     delete bankAcc;
 

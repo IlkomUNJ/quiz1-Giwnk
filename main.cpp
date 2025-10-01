@@ -4,20 +4,8 @@
 
 using namespace std;
 
-// Menu utama
-enum PrimaryPrompt {
-    LOGIN,
-    REGISTER,
-    EXIT_PROGRAM
-};
-
-// Menu setelah login
-enum LoginPrompt {
-    CHECK_ACCOUNT_STATUS,
-    UPGRADE_ACCOUNT,
-    CREATE_BANKING_ACCOUNT,
-    LOGOUT_TO_MAIN
-};
+enum PrimaryPrompt {LOGIN,REGISTER,EXIT_PROGRAM};
+enum LoginPrompt {CHECK_ACCOUNT_STATUS,UPGRADE_ACCOUNT,CREATE_BANKING_ACCOUNT,LOGOUT_TO_MAIN};
 
 int main() {
     Buyer* buyer1 = nullptr;

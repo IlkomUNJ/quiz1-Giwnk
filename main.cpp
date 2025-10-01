@@ -186,6 +186,29 @@ int main() {
 
             case REGISTER: {
                 cout << "\n--- Register selected ---" << endl;
+                if (isBuyer) {
+                    cout << "you already have a Buyer account, please login!\n";
+                } else {
+                    int buyerId;
+                    string name, address, phone, email;
+
+                    cout << "Input Buyer ID : ";
+                    cin >> buyerId;
+                    cin.ignore();
+                    cout << "Input Nama     : ";
+                    getline(cin, name);
+                    cout << "Input Address  : ";
+                    getline(cin, address);
+                    cout << "Input Phone    : ";
+                    getline(cin, phone);
+                    cout << "Input Email    : ";
+                    getline(cin, email);
+                    bankAcc = new BankCustomer(buyerId, name, 0.0);
+                    buyer1 = new Buyer(buyerId, name, *bankAcc);
+                    isBuyer = true;
+
+                    cout << "Buyer Account Created Successfully!\n";
+                }
                 /* 
                 if register is selected then go through registration process:
                 1. Create a new Buyer Account
